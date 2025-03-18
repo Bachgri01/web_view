@@ -40,78 +40,7 @@ void main() {
   //                   );
   runApp(MyApp());
 }
-
-Future<void> showNotification(dynamic id) async {
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-      FlutterLocalNotificationsPlugin();
-  await Permission.notification.request();
-  print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-   const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('your_channel_id', 'your_channel_name',
-            channelDescription: 'your_channel_description',
-            importance: Importance.max,
-            priority: Priority.high,
-            ticker: 'ticker');
-    const NotificationDetails platformChannelSpecifics =
-        NotificationDetails(android: androidPlatformChannelSpecifics);
-    print('Failed to load data from API');
-    await flutterLocalNotificationsPlugin.show(
-        0,
-        'IS Message',
-        'hh iwa ch adir',
-        platformChannelSpecifics,
-        payload: id);
-  // final response =
-  //     await http.get(Uri.parse('http://unionlabo.ma:3060/api/notif/$id'));
-  // if (response.statusCode == 200) {
-  //   var data = json.decode(response.body);
-  //   // You can extract specific data you want to use from the response
-  //   if (data.length < 1) return;
-  //   String sender = data.length > 0
-  //       ? data[0]['author_name']
-  //       : ""; // Adjust based on the API response
-  //   String me = data[0]['recipient_name']; // Adjust based on the API response
-  //   const AndroidNotificationDetails androidPlatformChannelSpecifics =
-  //       AndroidNotificationDetails('your_channel_id', 'your_channel_name',
-  //           channelDescription: 'your_channel_description',
-  //           importance: Importance.max,
-  //           priority: Priority.high,
-  //           ticker: 'ticker');
-
-  //   const NotificationDetails platformChannelSpecifics =
-  //       NotificationDetails(android: androidPlatformChannelSpecifics);
-  //   String r = data.length < 2 ? '$sender' : '';
-  //   await flutterLocalNotificationsPlugin.show(
-  //       0,
-  //       'IS Message',
-  //       'Vous avez ${data.length} nouveaux messages ${r}',
-  //       platformChannelSpecifics,
-  //       payload: id);
-  // } else {
-   
-  // }
-}
-
-void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) async {
-    // This function runs in the background every 15 minutes
-    // SharedPreferences prefs = await SharedPreferences.getInstance();
-    // String? storedUserId = prefs.getString('userid');
-
-    debugPrint('Stored User ID ===================:> $task');
-    debugPrint("Periodic task is running!");
-    showNotification(task);
-    return Future.value(
-        true); // Always return true when the task completes successfully
-  });
-  // Workmanager().executeTask((task, inputData) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   String? storedUserId = prefs.getString('userid');
-  //   print('Stored User ID ===================:> $storedUserId');
-  //   print("Background task executed");
-  //   return Future.value(true);
-  // });
-}
+  
 
 class MyApp extends StatelessWidget {
     final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -121,7 +50,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
       key: _scaffoldKey,
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 113, 99, 158),
+          backgroundColor: Color.fromARGB(255, 30, 100, 230),
           toolbarHeight: 0,
         ),
         drawer: Drawer(
