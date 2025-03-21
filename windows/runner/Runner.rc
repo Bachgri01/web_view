@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "new_web_view" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "new_web_view" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 unionlabo.ma. All rights reserved." "\0"
             VALUE "OriginalFilename", "new_web_view.exe" "\0"
             VALUE "ProductName", "new_web_view" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

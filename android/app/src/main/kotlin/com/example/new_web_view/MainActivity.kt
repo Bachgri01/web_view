@@ -1,4 +1,4 @@
-package com.example.new_web_view
+package unionlabo.ma.new_web_view
 
 import io.flutter.embedding.android.FlutterActivity
 
