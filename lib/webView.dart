@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart'; 
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:permission_handler/permission_handler.dart';
+// import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:workmanager/workmanager.dart';
+// import 'package:workmanager/workmanager.dart';
 
 class WebViewDemo extends StatefulWidget {
   @override
@@ -16,9 +15,7 @@ class WebViewDemo extends StatefulWidget {
 
 class _WebViewDemoState extends State<WebViewDemo> {
   late InAppWebViewController _webViewController;
-
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-      FlutterLocalNotificationsPlugin();
+ 
    bool isConnected = true; // Track internet connectivity
   @override
   void initState() {
