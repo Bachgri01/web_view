@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart'; 
-import 'dart:async';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';  
 import 'package:connectivity_plus/connectivity_plus.dart';
-// import 'package:permission_handler/permission_handler.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:permission_handler/permission_handler.dart'; 
 // import 'package:workmanager/workmanager.dart';
 
 class WebViewDemo extends StatefulWidget {
@@ -14,7 +10,6 @@ class WebViewDemo extends StatefulWidget {
 }
 
 class _WebViewDemoState extends State<WebViewDemo> {
-  late InAppWebViewController _webViewController;
  
    bool isConnected = true; // Track internet connectivity
   @override
@@ -51,6 +46,8 @@ class _WebViewDemoState extends State<WebViewDemo> {
             origin: origin, allow: true, retain: true);
       },
       androidOnPermissionRequest: (controller, origin, resources) async {
+        return null;
+      
           
       },
       onLoadStop: (controller, url) async {
@@ -104,6 +101,7 @@ class NoInternetPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               // Reload the app
+              // ignore: invalid_use_of_protected_member
               (context as Element).reassemble();
             },
             child: Text("Réessayer"),
